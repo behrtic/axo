@@ -12,10 +12,20 @@ script/source = "extends Node2D
 
 [node name="Main" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_mli2r")]
-
 [node name="Arena" type="Node2D" parent="."]
 script = SubResource("GDScript_o5qli")
+
+[node name="ColorRect" type="ColorRect" parent="Arena"]
+offset_right = 1200.0
+offset_bottom = 800.0
+color = Color(0, 0, 0.501961, 1)
+
+[node name="Line2D" type="Line2D" parent="Arena"]
+points = PackedVector2Array(0, 0, 1200, 0, 1200, 800, 0, 800, 0, 0)
+width = 6.0
+
+[node name="Player" parent="." instance=ExtResource("1_mli2r")]
+position = Vector2(600, 400)
 
 [node name="EnemySpawner" type="Node2D" parent="."]
 script = ExtResource("2_f8fyy")

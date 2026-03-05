@@ -19,6 +19,5 @@ func _physics_process(delta):
 	velocity = direction * speed
 
 	move_and_slide()
-
-	position.x = clamp(position.x, 0, arena_size.x)
-	position.y = clamp(position.y, 0, arena_size.y)
+	
+	position = position.clamp(Vector2.ZERO, arena_size)
