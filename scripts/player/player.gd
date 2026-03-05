@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+#Projectile Loading
+@export var projectile_scene: PackedScene
+
 #Arena Bounding 
 @export var arena_size = Vector2(1200, 800)
 

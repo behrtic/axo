@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw0mxvse4v4o"]
+
+[ext_resource type="Script" uid="uid://cxvvcsqepokl0" path="res://scripts/weapons/projectile.gd" id="1_vl370"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vl370"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qp4n5"]
+
+[node name="Projectiles" type="Area2D"]
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("1_vl370")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = SubResource("PlaceholderTexture2D_vl370")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qp4n5")

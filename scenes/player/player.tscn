@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfs76ukg82tdm"]
+[gd_scene load_steps=7 format=3 uid="uid://bfs76ukg82tdm"]
 
 [ext_resource type="Script" uid="uid://da8udfgh82csg" path="res://scripts/player/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://pq1ox6u3ih15" path="res://scenes/weapons/weapons.tscn" id="2_gmlin"]
+[ext_resource type="PackedScene" uid="uid://cw0mxvse4v4o" path="res://scenes/weapons/projectile.tscn" id="3_lvxji"]
 
 [sub_resource type="Gradient" id="Gradient_u8vuu"]
 
@@ -11,6 +13,7 @@ gradient = SubResource("Gradient_u8vuu")
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_3vyb7")
+projectile_scene = ExtResource("3_lvxji")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("GradientTexture2D_3vyb7")
@@ -19,3 +22,8 @@ texture = SubResource("GradientTexture2D_3vyb7")
 shape = SubResource("CircleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="WeaponManager" type="Node2D" parent="."]
+
+[node name="Weapons" parent="WeaponManager" instance=ExtResource("2_gmlin")]
+projectile_scene = ExtResource("3_lvxji")
