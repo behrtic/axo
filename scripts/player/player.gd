@@ -1,5 +1,10 @@
 extends CharacterBody2D
 
+#Arena Bounding 
+@export var arena_size = Vector2(1200, 800)
+
+
+#Player Movement Script
 @export var speed = 200
 
 func _physics_process(delta):
@@ -14,3 +19,6 @@ func _physics_process(delta):
 	velocity = direction * speed
 
 	move_and_slide()
+
+	position.x = clamp(position.x, 0, arena_size.x)
+	position.y = clamp(position.y, 0, arena_size.y)
