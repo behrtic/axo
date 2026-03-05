@@ -8,7 +8,7 @@
 
 [node name="Projectiles" type="Area2D"]
 collision_layer = 2
-collision_mask = 8
+collision_mask = 4
 script = ExtResource("1_vl370")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -17,3 +17,5 @@ texture = SubResource("PlaceholderTexture2D_vl370")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qp4n5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

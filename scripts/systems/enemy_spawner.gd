@@ -16,7 +16,6 @@ func _ready():
 		push_error("Player not found!")
 
 func _process(delta):
-	print(player)
 	timer += delta
 	
 	if timer >= spawn_rate:
