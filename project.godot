@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="Axo"
+run/main_scene="uid://toug8kiu3lww"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
